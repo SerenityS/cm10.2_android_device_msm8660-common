@@ -236,7 +236,7 @@ key 213   MUSIC
 # key 214 "KEY_QUESTION"
 key 215   ENVELOPE
 # key 216 "KEY_CHAT"
-key 217   SEARCH             WAKE
+key 217   SEARCH
 # key 218 "KEY_CONNECT"
 # key 219 "KEY_FINANCE"
 # key 220 "KEY_SPORT"
@@ -246,12 +246,6 @@ key 217   SEARCH             WAKE
 # key 224 "KEY_BRIGHTNESSDOWN"
 # key 225 "KEY_BRIGHTNESSUP"
 key 226   HEADSETHOOK
-
-#N1037 ADD TEST & CMD
-key 227   STAR   			WAKE_DROPPED
-key 228   POUND				WAKE_DROPPED
-key 229   ENDCALL			
-key 231   CALL		
 
 key 256   BUTTON_1
 key 257   BUTTON_2
@@ -426,13 +420,3 @@ axis 0x09 GAS
 axis 0x0a BRAKE
 axis 0x10 HAT_X
 axis 0x11 HAT_Y
-
-
-#+US1-CF1
-#Feature : FW_VENDOR_ADD_KEYCODE
-key 122     HANGEUL
-#key 58      CAPSLOCK             
-#key 61      VT_CALL
-#key 247     HOLD
-#key 273     BACK 
-#-US1-CF1

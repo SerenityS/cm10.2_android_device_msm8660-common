@@ -1,4 +1,3 @@
-# Copyright (C) 2012 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -101,6 +100,14 @@ PRODUCT_PACKAGES += \
     PinyinIME \
     FileExplorer
     
+# libnetcmdiface
+PRODUCT_PACKAGES += \
+   libnetcmdiface
+
+# Ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom 
+
 # NFC Support
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:system/etc/permissions/com.android.nfc_extras.xml \
@@ -152,13 +159,7 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    charger \
 #    charger_res_images
-    
-# for bugmailer
-PRODUCT_PACKAGES += send_bug
-PRODUCT_COPY_FILES += \
-    system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
-    system/extras/bugmailer/send_bug:system/bin/send_bug
-   
+     
 # patch for Bluetooth
 PRODUCT_COPY_FILES += \
     device/pantech/msm8660-common/firmware/BCM4330B1_002.001.003.0379.0462.hcd:system/etc/firmware/BCM4330B1_002.001.003.0379.0462.hcd
@@ -214,10 +215,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # We have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
-
-#apps
-PRODUCT_COPY_FILES += \
-    device/pantech/msm8660-common/preinstall/RootExplorer.apk:/system/app/RootExplorer.apk
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 

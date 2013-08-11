@@ -21,20 +21,15 @@ BOARD_VENDOR := pantech
 # Bootloader
 TARGET_NO_BOOTLOADER := true
 
-# Platform
-TARGET_BOARD_PLATFORM := msm8660
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
 # Architecture
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH_VARIANT := armv7-a-neon
-TARGET_ARCH_VARIANT_CPU := cortex-a8
+TARGET_BOARD_PLATFORM := msm8660
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_CPU_SMP := true
-ARCH_ARM_HAVE_NEON := true
-ARCH_ARM_HAVE_TLS_REGISTER := true
-
+ENABLE_WEBGL := true
 
 # Scorpion optimizations
 TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
@@ -70,6 +65,7 @@ WIFI_DRIVER_MODULE_AP_ARG   := "firmware_path=/system/etc/wifi/bcmdhd_apsta.bin 
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_CUSTOM_GRAPHICS := ../../../device/pantech/msm8660-common/recovery/graphics.c
 
+
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
@@ -78,13 +74,13 @@ BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
 
 # Audio
 COMMON_GLOBAL_CFLAGS += -DQCOM_VOIP_ENABLED -DQCOM_ACDB_ENABLED
-TARGET_QCOM_AUDIO_VARIANT := caf
+#TARGET_QCOM_AUDIO_VARIANT := caf
 
 # Graphics
 USE_OPENGL_RENDERER := true
 TARGET_USES_ION := true
 TARGET_USES_C2D_COMPOSITION := true
-TARGET_QCOM_DISPLAY_VARIANT := caf
+#TARGET_QCOM_DISPLAY_VARIANT := caf
 
 BOARD_EGL_CFG := device/pantech/msm8660-common/configs/egl.cfg
 
